@@ -1,5 +1,13 @@
-# Modernize Moodle LMS with AWS serverless containers
+# Moodle LMS on ECS Fargate
 
-This repository contains an [AWS Cloud Development Kit (AWS CDK)](https://aws.amazon.com/cdk/) application to deploy highly-available, elastic, and scalable Moodle LMS application using containers technology on AWS by leveraging [Amazon Elastic Container Services (Amazon ECS)](https://aws.amazon.com/ecs/) and [AWS Fargate](https://aws.amazon.com/fargate/).
+AWS CDK application to deploy highly available, elastic, and auto-scaling Moodle LMS using containers on AWS.
 
-For more details and instructions on how to deploy, please visit the following blog post: https://aws.amazon.com/blogs/publicsector/modernize-moodle-lms-aws-serverless-containers/
+## Architecture
+
+- **ECS Fargate**: Serverless Moodle containers
+- **Application Load Balancer**: Load distribution and SSL termination
+- **RDS Aurora**: Managed MySQL/PostgreSQL database
+- **EFS**: Shared file storage for moodledata
+- **CloudFront**: CDN for static assets
+- **Auto Scaling**: Automatic container scaling
+
